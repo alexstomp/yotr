@@ -1,0 +1,45 @@
+// MIXINS
+
+@mixin border-box
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+@mixin roundedCorners($radius: 3px)
+    border-radius: $radius
+    -moz-border-radius: $radius
+    -webkit-border-radius: $radius
+    background-clip: padding-box
+    -moz-background-clip: padding-box
+    -webkit-background-clip: padding-box
+
+@mixin text-shadow($settings: 1px 1px white)
+    text-shadow: $settings
+    -moz-text-shadow: $settings
+    -webkit-text-shadow: $settings
+
+@mixin shadow($settings)
+    box-shadow: $settings
+    -moz-box-shadow: $settings
+    -webkit-box-shadow: $settings
+
+@mixin backgroundGradient($settings)
+    background-image: linear-gradient($settings)
+    background-image: -o-linear-gradient($settings)
+    background-image: -ms-linear-gradient($settings)
+    background-image: -moz-linear-gradient($settings)
+    background-image: -webkit-linear-gradient($settings)
+
+@mixin opacity($value)
+    opacity: $value
+    filter: unquote("alpha(opacity=#{($value * 100)})")
+
+@mixin transform($transform)
+    transform: $transform
+    -moz-transform: $transform
+    -webkit-transform: $transform
+
+@mixin backgroundSize($tuplePercent)
+    background-size: $tuplePercent
+    -moz-background-size: $tuplePercent
+    -webkit-background-size: $tuplePercent
