@@ -4,12 +4,13 @@
     background: image-url('home_banner.jpg')
     background-size: cover
     background-position: center center
-    min-height: 550px
+    height: 500px
     padding-top: 150px
     text-align: center
     width: 100%
     #logo
-        width: 450px
+        max-width: 450px
+        width: 85%
 
 .home-content
     +shadow(0 0 0 1px rgba(0,0,0,.05))
@@ -18,3 +19,19 @@
     margin: -150px auto 150px
     padding: 50px
     width: 95%
+
+
+//MEDIUM
+
+@media screen and (max-width: $medium)
+
+//SMALL
+
+@media screen and (max-width: $small)
+    .home-banner
+        height: 450px
+        padding-top: 200px
+    .home-content
+        +shadow(0 0 0 1px rgba(0,0,0,.02))
+        margin-top: 0
+        width: 100%

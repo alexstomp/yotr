@@ -18,6 +18,18 @@
             &:hover
                 color: $accent
 
+.show-menu
+    background: $black
+    border: 1px solid $black
+    color: white
+    display: none
+    padding: 10px 15px
+    position: absolute
+    right: 15px
+    top: 15px
+    &:hover
+        border-color: white
+
 //MEDIUM
 
 @media screen and (max-width: $medium)
@@ -27,3 +39,5 @@
 @media screen and (max-width: $small)
     #topnav
         display: none
+    .show-menu
+        display: block
