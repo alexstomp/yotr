@@ -4,14 +4,16 @@
     font-family: "Liberator"
     src: font-url('Liberator-Heavy.ttf') format('truetype')
 
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700)
+
 // CONTENT RESET STYLES
 
 li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td, div, span, textarea, strong
     color: inherit
-    font-family: "Source Sans Pro", Georgia, serif
-    font-size: 1.3rem
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
+    font-size: 1.4rem
     letter-spacing: .03rem
-    line-height: 1.7rem
+    line-height: 2.5rem
     list-style: none outside none
     text-decoration: none
 
@@ -21,10 +23,22 @@ li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td, div, span, textarea, str
 // HEADERS
 
 h1, h2, h3, h4, h5, h6
-    font-family: "Liberator", "Arial Black", Arial
-    font-weight: 300
+    font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
+    font-weight: bold
+
+h1, h2
+    font-family: "Liberator", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
+    letter-spacing: .1rem
+    font-size: 2.5rem
+    padding-bottom: 25px
+    text-transform: uppercase
 
 .accent-text
     color: $accent
     font-size: inherit
     font-weight: inherit
+
+p
+    padding-bottom: 25px
+    &:last-child
+        padding-bottom: 0

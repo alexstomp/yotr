@@ -1,10 +1,20 @@
 // HOME PAGE
 
-.content-wrap
+.home-banner
+    background: image-url('home_banner.jpg')
+    background-size: cover
+    background-position: center center
+    min-height: 550px
+    padding-top: 150px
     text-align: center
-    img
-        width: 100%
-    h2
-        color: white
-        font-size: 30pt
-        padding-top: 40px
+    width: 100%
+    #logo
+        width: 450px
+
+.home-content
+    +shadow(0 0 0 1px rgba(0,0,0,.05))
+    background: #ffffff
+    max-width: 1010px
+    margin: -150px auto 150px
+    padding: 50px
+    width: 95%

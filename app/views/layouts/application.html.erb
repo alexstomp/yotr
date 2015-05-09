@@ -7,6 +7,13 @@
       <%= csrf_meta_tags %>
     </head>
     <body>
+        <nav id="topnav">
+            <li><a href="<%= root_path %>">READ</a></li>
+            <li><a href="<%= about_path %>">LEARN</a></li>
+            <li><a href="<%= new_post_path %>">POST</a></li>
+            <!--<li><a href="#">GIVE/BUY</a></li>-->
+        </nav>
+
         <%= yield %>
     </body>
 </html>
