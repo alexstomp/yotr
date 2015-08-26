@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   get 'inspiration' => 'application#inspiration'
   get 'join' => 'application#join'
 
+  # Auth/Authed Pages
+  devise_for :users
+
 end

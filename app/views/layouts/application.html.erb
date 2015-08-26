@@ -12,16 +12,46 @@
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
-    <body>
-        <nav id="topnav">
-            <li><a href="<%= root_path %>">READ</a></li>
-            <li><a href="<%= about_path %>">ABOUT</a></li>
-            <li><a href="<%= inspiration_path %>">INSPIRATION</a></li>
-            <li><a href="<%= join_path %>">JOIN US</a></li>
-            <li><a href="<%= submit_path %>">SUBMIT</a></li>
-        </nav>
+    <body class="js-body">
+        <div class="js-header">
+            <nav id="topnav">
+                <li><a href="<%= root_path %>">READ</a></li>
+                <li><a href="<%= about_path %>">ABOUT</a></li>
+                <li><a href="<%= inspiration_path %>">INSPIRATION</a></li>
+                <li><a href="<%= join_path %>">JOIN US</a></li>
+                <li><a href="<%= submit_path %>">SUBMIT</a></li>
+            </nav>
 
-        <a href="#" class="show-menu">MENU</a>
+            <% if notice %>
+                <p class="notice"><%= notice %></p>
+            <% end %>
+            <% if alert %>
+                <p class="notice"><%= alert %></p>
+            <% end %>
+
+            <a href="#" class="show-menu js-show-menu">
+                <i class="icon-menu"></i>
+            </a>
+
+            <nav id="menu" class="js-menu">
+                <li class="menu-header">
+                    <i class="icon-close js-close-menu"></i>
+                    Menu
+                </li>
+                <li><a href="<%= root_path %>">HOME</a></li>
+                <li><a href="<%= about_path %>">ABOUT</a></li>
+                <li><a href="<%= inspiration_path %>">INSPIRATION</a></li>
+                <li><a href="<%= join_path %>">JOIN US</a></li>
+                <li><a href="<%= submit_path %>">SUBMIT</a></li>
+                <li class="divider"></li>
+                <% if user_signed_in? %>
+                    <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete %></li>
+                <% else %>
+                    <li><a href="<%= new_user_session_path %>">LOGIN</a></li>
+                    <li><a href="<%= new_user_registration_path %>">SIGN UP</a></li>
+                <% end %>
+            </nav>
+        </div>
 
         <%= yield %>
     </body>
