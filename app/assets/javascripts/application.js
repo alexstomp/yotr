@@ -17,5 +17,4 @@
 //= require backbone
 //= require yotr
 //= require_tree .
-//= require_tree ./models
 //= require_tree ./views
