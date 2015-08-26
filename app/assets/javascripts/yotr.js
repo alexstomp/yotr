@@ -42,18 +42,26 @@ var yotr = {
     }(),
     log: function(msg) {
         console.log(msg);
+    },
+    initialize: function() {
+        var RouterModule = yotr.module('modules.router');
+
+        /* App Router */
+        yotr.router = new RouterModule.Router();
+
+        /* Start HTML5 history support */
+        Backbone.history.start({
+            'hashChange': false,
+            'root': '/'
+        });
     }
 };
 
-$(function() {
-    var RouterModule = yotr.module('modules.router');
+$(document).ready(function() {
+    return yotr.initialize();
+});
 
-    /* App router */
-    yotr.router = new RouterModule.Router();
-
-    /* Start HTML5 history support */
-    Backbone.history.start({
-        'hashChange': false,
-        'root': '/'
-    });
+$(document).on('page:load', function() {
+  Backbone.history.stop();
+  return yotr.initialize();
 });
