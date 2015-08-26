@@ -9,6 +9,12 @@ class ApplicationController < ActionController::Base
     def about
     end
 
-    def new_post
+    def submit
+    end
+
+    def inspiration
+    end
+
+    def join
     end
 end

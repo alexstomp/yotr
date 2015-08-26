@@ -28,12 +28,15 @@ h1, h2, h3, h4, h5, h6
     font-weight: bold
 
 h1, h2
+    +text-shadow()
     font-family: "Liberator", "Source Sans Pro", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif
     letter-spacing: .1rem
-    font-size: 2.5rem
-    line-height: 3.5rem
+    font-size: 2.7rem
+    line-height: 3.2rem
     padding-bottom: 25px
     text-transform: uppercase
+    &.centered-header
+        text-align: center
 
 .accent-text
     color: $accent
@@ -44,3 +47,8 @@ p
     padding-bottom: 25px
     &:last-child
         padding-bottom: 0
+
+a
+    color: $link
+    &:hover
+        color: darken($link, 10%)

@@ -2,5 +2,8 @@ Rails.application.routes.draw do
   root 'application#home'
 
   get 'about' => 'application#about'
-  get 'post' => 'application#new_post', :as => "new_post"
+  get 'submit' => 'application#submit'
+  get 'inspiration' => 'application#inspiration'
+  get 'join' => 'application#join'
+
 end
