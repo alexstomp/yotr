@@ -1,7 +1,7 @@
 class AdminController < ApplicationController
 
-    def dashboard
-        
+    def posts
+
     end
 
 end

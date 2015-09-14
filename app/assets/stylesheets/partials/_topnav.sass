@@ -19,6 +19,11 @@
             line-height: 65px
             &:hover
                 color: $accent !important
+            &.disabled
+                color: lighten($black, 20%)
+                &:hover
+                    color: lighten($black, 20%) !important
+                    cursor: default
 
 .show-menu
     background: lighten($black, 5%)
