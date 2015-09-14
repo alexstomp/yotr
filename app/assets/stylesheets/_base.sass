@@ -43,3 +43,13 @@
     background-size: $tuplePercent
     -moz-background-size: $tuplePercent
     -webkit-background-size: $tuplePercent
+
+@mixin placeholder
+    &::-webkit-input-placeholder
+        @content
+    &::-moz-placeholder
+        @content
+    &:-ms-input-placeholder
+        @content
+    &:-moz-placeholder
+        @content

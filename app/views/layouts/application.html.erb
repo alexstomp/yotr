@@ -13,7 +13,7 @@
         <%= csrf_meta_tags %>
     </head>
     <body class="js-body">
-        <div class="js-header">
+        <div class="header js-header">
             <nav id="topnav">
                 <li><a href="<%= root_path %>">READ</a></li>
                 <li><a href="<%= about_path %>">ABOUT</a></li>
@@ -23,10 +23,16 @@
             </nav>
 
             <% if notice %>
-                <p class="notice"><%= notice %></p>
+                <p class="notice js-notice">
+                    <%= notice %>
+                    <i class="icon-cross js-close"></i>
+                </p>
             <% end %>
             <% if alert %>
-                <p class="notice"><%= alert %></p>
+                <p class="alert js-notice">
+                    <%= alert %>
+                    <i class="icon-cross js-close"></i>
+                </p>
             <% end %>
 
             <a href="#" class="show-menu js-show-menu">

@@ -7,6 +7,6 @@ Rails.application.routes.draw do
   get 'join' => 'application#join'
 
   # Auth/Authed Pages
-  devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
 end
