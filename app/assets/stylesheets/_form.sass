@@ -71,6 +71,7 @@ label
 // Button
 
 .button, input[type="button"], input[type="submit"]
+    @extend input
     +backgroundGradient('top, $accent, darken($accent, 5%)')
     +text-shadow(0 1px rgba(0,0,0,0.1))
     background-color: darken($accent, 5%)
@@ -78,9 +79,15 @@ label
     color: #fff
     display: block
     font-size: 13px
+    padding: 0 30px 0 20px
+    [class^="icon-"], [class*=" icon-"], [class^="path"], [class*=" path"]
+        font-size: 16px
+        padding-right: 5px
+        vertical-align: middle
     &:hover
         background-color: darken($accent, 10%)
         border: 1px solid darken($accent, 15%)
+        color: #fff
         cursor: pointer
 
 // MEDIUM

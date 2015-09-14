@@ -1,0 +1,53 @@
+// Dashboard
+
+.dashboard
+    +shadow(0 0 0 1px rgba(0,0,0,.05))
+    background: #ffffff
+    margin: 50px auto 100px
+    max-width: 900px
+    padding: 30px 45px 45px
+    position: relative
+    width: 95%
+    .dashboard-nav
+        @extend .clearfix
+        display: block
+        padding-bottom: 15px
+        .new-post
+            float: left
+            width: auto
+    .list-header, .list .list-item
+        display: block
+        border-bottom: 1px solid $border
+        padding-left: 15px
+        position: relative
+        width: 100%
+        span
+            font-size: 12px
+            font-weight: 400
+            display: inline-block
+            padding: 7px
+            width: 50%
+            &.list-item-col, &.list-header-col
+                width: 15%
+        &.list-header span
+            color: lighten($bg, 20%)
+            font-size: 14px
+            font-weight: 400
+        &:hover
+            background: lighten($border, 8%)
+        &.list-header:hover
+            background: transparent
+        &:nth-child(odd)
+            background: lighten($border, 7%)
+            &:hover
+                background: lighten($border, 6%)
+        [class^="icon-"], [class*=" icon-"], [class^="path"], [class*=" path"]
+            color: lighten($bg, 20%)
+            font-size: 12px
+            padding-right: 2px
+            position: absolute
+            top: 8px
+            left: 5px
+    .list
+        margin-bottom: 15px
+        width: 100%

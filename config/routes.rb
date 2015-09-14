@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   # Auth/Authed Pages
   devise_for :users, :path => '', :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 
+  get 'dashboard' => 'admin#dashboard'
+
 end
